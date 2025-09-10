@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none;}
+img{width: 100%;}
+.flex-box{display: flex; flex-wrap: wrap;}
+.container{max-width: 1400px; margin: auto;}
+a{color: #333333;}
+h2{font-size: 32px; color: #333333; margin: 70px 0 35px 0; display: inline-block; letter-spacing: -1px;}
+
+body{  font-family: "Asta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;}
+
+
+
+  
+/* 헤더 */
+header{position: fixed; background-color: #F9F6F5; width: 100%; z-index: 100;
+top: 0; left: 0;}
+header a{color: #333333; font-weight: bold;}
+header .headerbox{align-items: center; width: 90%; padding: 10px 0; }
+   
+header .headerbox .logo{width: 10%;}
+header nav{width: 70%;}
+
+header nav ul{text-align: center;}
+header nav ul li{width: 16.66%; text-align: center;}
+header .icon{width: 20%;text-align: right; }
+header .icon img{width: 30px;}
+header .icon .tbmo-menu{display: none;}
+
+
+
+/* 서브 메뉴 묶음 */
+
+.sub{width:100%; padding:10px 0px; position: absolute; top: 80px; left: 0;z-index: 10; 
+  background-color: #F9F6F5; box-shadow:0 2px 2px 0 #9c9b9b; display: none;}
+.sub-box.flex-box>div:nth-child(2){width: 70%;}
+.sub-box .left{width: 10%;}
+.sub-box .right{width: 20%; }
+.sub-box>.flex-box>ul{width: 16.66%; text-align: center; border-top: #d9d9d9 1px solid;}
+
+.sub-box ul>li{padding: 15px 0;}
+.sub-box ul>li a{font-weight: normal; font-size: 14px;}
+
+
+
+/* 푸터 */
+footer{background-color: #333333; padding: 20px; text-align: center; margin-top: 100px;}
+footer ul{order: 1;}
+footer ul li{display: inline-block; padding: 0 15px; font-size: 14px;}
+footer ul li a{color: #fff;}
+
+footer>div:nth-child(2){margin-top: 30px;}
+footer>div:nth-child(2)>p{text-align: left; font-weight: lighter; order: 2;}
+footer>div:nth-child(2)>p, footer>div:nth-child(2)>a{display: inline-block; color: #fff;
+font-size: 12px;}
+footer>div:nth-child(2) p>br:nth-child(1),footer>div:nth-child(2) p>br:nth-child(3){display:none}
+footer>div:nth-child(2)>a:nth-child(1){order: 3;}
+footer .link{order: 4; display: inline-block;}
+
+footer img{margin: 0 10px;}
+
+
+/* 모바일 메뉴 박스 ---------------------------------------------------- */
+
+#mo-menu-box{width:85%; height : 100% ; position: fixed; z-index: 100; 
+    background-color: #fff; top:0px; right:-10000px; transition: all 0.5s; 
+     text-align: center; box-shadow:0 2px 2px 0 #9c9b9b;}
+#mo-menu-box .mo-menu-box-cont{width: 90%; margin: auto;}
+#mo-menu-box.show{right: 0}
+
+#mo-menu-box .exit{padding: 30px 20px; text-align: right;}
+#mo-menu-box .exit img{width: 45px;}
+#mo-menu-box .mb-head.flex-box{width: 100%; justify-content: space-between; margin: auto;
+                                padding-top: 20px; vertical-align: middle;
+                              align-items: center;  transform: translateX(2%);}
+
+#mo-menu-box .mb-head.flex-box>div:nth-child(1){width: 10%;}
+#mo-menu-box .mb-head.flex-box>div:nth-child(2){width: 70%; font-size: 26px; 
+  text-align: left; padding-left: 30px;}
+#mo-menu-box .mb-head.flex-box>div:nth-child(3){width: 20%;}
+#mo-menu-box .menu{text-align: left; margin-left: 50px; padding-top: 90px;}
+.menu>ul>li{padding: 20px 0;}
+
+#tbmo-menu i{cursor: pointer;}
+
+
+
+
+/* 아코디언 메뉴 */
+.accordion-list {border-top: 2px solid #EA094B; transform: translateX(-4%);}
+.accordion-list .accordion-name {border-bottom: 1px solid #ddd;}
+.accordion-list .accordion-name >ul {display: none;}
+.accordion-list span{vertical-align: middle;
+/* 강제적으로 위치를 잡을때 사용. 앱솔루트와는 다름. 예전에 사용했던 코드이나 요즘도 상황에 따라 사용함  */
+  float: right; 
+  margin-right: 20px;
+transform: rotate(180deg);}
+
+.accordion-name >a{display: block; width: 100%; 
+  background-color: #fff; padding: 10px ;color: #333333; font-size: 22px;}
+
+
+.accordion-name ul li{padding-left: 30px;}
+
+.accordion-list span{color: #EA094B;}
+.accordion-list span.rotate{transform: rotate(0deg);}
+
+.accordion-name>a.back-li{background-color: #d9d9d9; color: #333333;}
+.accordion-list .accordion-name ul.back-ul{background-color: #F9F6F5;} 
+.accordion-name ul>li{padding: 20px 0 20px 30px; font-size: 18px;}
+.accordion-desc a{color: #000;}
+
+
+
+
+
+/* 미디어쿼리 */
+
+
+@media (max-width:1630px) {header .headerbox .logo{width: 15%;}
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+header .headerbox .logo{width: 15%;}
+
+header nav{display: none;}
+header .icon {
+    width: 90%;
+    text-align: right;}
+
+header .icon img{width: 35px; display: inline-block; margin-right: 10px;}
+header .icon .tbmo-menu{display: inline-block; margin-right: 0;}
+
+
+footer>div:nth-child(2)>p{margin-bottom: 20px; margin-top: -5px;}
+
+#mo-menu-box .menu{margin-left: 30px; padding-top: 50px;}
+#mo-menu-box .exit img{width: 35px;}
+
+.accordion-name >a{font-size: 20px;}
+
+
+
+
+}
+
+
+
+
+
+
+@media (max-width:767px) {header .headerbox .logo{width: 25%;}
+header .headerbox{width: 90%; flex-wrap: nowrap;}
+header .icon {
+    width: 90%;
+    text-align: right;}
+header .icon img{width: 25px;}
+
+.flex-box{display: flex; flex-wrap: wrap;}
+
+
+
+
+footer ul li{font-size: 12px;}
+footer>div:nth-child(2)>p{text-align: center;}
+
+#mo-menu-box .menu{padding-top: 50px;}
+#mo-menu-box .exit img{width: 35px;}
+
+.accordion-name >a{font-size: 16px;}
+.accordion-name ul>li{font-size: 16px;}
+
+}
+
+
+@media (max-width:400px) {
+
+header .icon img{width: 25px;}
+
+#mo-menu-box .menu{margin-left: 20px; padding-top: 20px;}
+
+#mo-menu-box .exit img{width: 30px;}
+.accordion-name >a{font-size: 18px;}
+
+
+}
