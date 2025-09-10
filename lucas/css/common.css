@@ -1,0 +1,230 @@
+@charset "utf-8";
+
+
+*{margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none;}
+img{width: 100%;}
+.flex-box{display: flex; flex-wrap: wrap;}
+.container{max-width: 1400px; margin: auto; padding: 0 20px;}
+
+
+body{
+  font-family:"IBM Plex Sans", "IBM Plex Sans KR", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* 헤더 */
+header{position: fixed; background-color: #fff; width: 100%; z-index: 1000; 
+  top: 0; left: 0; height: 135px; transition: all 0.5s; }
+header>div {width: 60%; margin: auto; position: absolute; left: 20%; }
+
+header .logo{width: 20%; margin: auto; margin-top: 5px; margin-bottom: 7px;}
+header .logo span{display: none;}
+header .logo a{color: #205781; font-size: 78px; letter-spacing: -5px; text-align: center;}
+header nav{background-color: #205781; border-radius: 30px; padding: 10px 0; 
+   z-index: 100; position: relative;}
+header nav ul{text-align: center;}
+header nav .container li{width: 20%; padding: 0 20px; font-weight: bold; font-size: 20px;}
+header a{color: #fff;}
+header .icon{display: none;}
+
+header .headerbox{position: fixed; height: 150px;}
+
+
+/* 서브 메뉴 묶음 */
+
+.sub{width:100%; padding:10px 0px; position: absolute; top: 150px; left: 0px;z-index: 10; 
+  background-color: #205781; border-radius: 30px; display: none; }
+
+.sub-box>ul{width: 20%; text-align: center; padding: 10px;}
+.sub-box>ul>li{padding: 10px 0;}
+.sub-box>ul>li a{font-weight: normal;}
+
+
+/* 배너 */
+.banner{margin-top: 132px;}
+.tb-banner, .mo-banner{display: none;}
+
+
+/* footer */
+footer{text-align: center; background-color: #fff; border-top: grey 1px solid;
+margin-top: 100px;}
+footer .flex-box>div{padding: 20px;}
+footer .flex-box>div:nth-child(1){width: 50%; text-align: start; order: 1;}
+footer .flex-box>div:nth-child(2){width: 25%; border-left: grey 1px solid; 
+  border-right: grey 1px solid; order: 2;}
+footer .flex-box>div:nth-child(3){width: 25%; order: 3;}
+.footertitle{font-size: 25px; font-weight: bolder; color: #205781;}
+footer a{cursor: pointer; color: #000;}
+
+
+/* under */
+
+.under{left: 0; bottom: 0; width: 100%; background-color: #205781; color: #fff;
+  padding: 15px 0; z-index: 100;}
+.under p{font-weight: bold;}
+.under .flex-box{align-items: center;}
+.under img{width: 50px;}
+.under .flex-box>div:nth-child(1){width: 70%; text-align: start;}
+.under .flex-box>div:nth-child(2){width: 15%; text-align: center; display: none;}
+.under .flex-box>div:nth-child(3){width: 15%; border-left: grey 1px solid; 
+  border-right: grey 1px solid; text-align: center;}
+.under .flex-box>div:nth-child(4){width: 15%; text-align: center;}
+.under .notice{vertical-align: middle;}
+.under .notice span:nth-child(1){color: #000; display: inline-block; width: 100px; text-align: center;
+padding: 10px 0; margin-right: 20px; border-radius: 40px; background-color: #fff; font-size: 20px;
+font-weight: bold;}
+.under .notice span:nth-child(2){font-size: 20px; font-weight: bold;}
+.under a{color: #fff;}
+
+
+/* 모바일 메뉴 박스 ---------------------------------------------------- */
+
+#mo-menu-box{width:100%; height : 100% ; position: fixed; z-index: 100; 
+    background-color: #fff; top:0px; right:-10000px; transition: all 0.5s; 
+     text-align: center;}
+#mo-menu-box .mo-menu-box-cont{width: 90%; margin: auto;}
+#mo-menu-box.show{right: 0}
+
+#mo-menu-box img{width: 70px;}
+#mo-menu-box .mb-head.flex-box{width: 100%; justify-content: space-between; margin: auto;
+                                padding-top: 20px; vertical-align: middle;
+                              align-items: center;  transform: translateX(2%);}
+
+#mo-menu-box .mb-head.flex-box>div:nth-child(1){width: 10%;}
+#mo-menu-box .mb-head.flex-box>div:nth-child(2){width: 70%; font-size: 26px; 
+  text-align: left; padding-left: 30px;}
+#mo-menu-box .mb-head.flex-box>div:nth-child(3){width: 20%;}
+#mo-menu-box .exit i{font-size: 26px; color: #205781;}
+#mo-menu-box .menu{text-align: left; margin-left: 50px; margin-top: 50px; padding-top: 90px;}
+.menu>ul>li{padding: 20px 0;}
+
+#tbmo-menu i{cursor: pointer;}
+
+
+
+
+
+/* 아코디언 메뉴 */
+.accordion-list {border-top: 2px solid #205781; transform: translateX(-4%);}
+.accordion-list .accordion-name {border-bottom: 1px solid #ddd;}
+.accordion-list .accordion-name >ul {display: none;}
+.accordion-list span{vertical-align: middle;
+/* 강제적으로 위치를 잡을때 사용 앱솔루트와는 다름. 예전에 사용했던 코드이나 요즘도 상황에 따라 사용함  */
+  float: right; 
+  margin-right: 20px;
+transform: rotate(180deg);}
+
+.accordion-name >a{display: block; width: 100%; 
+  background-color: #fff; padding: 10px ;color: #000; font-size: 22px;}
+
+
+.accordion-name ul li{padding-left: 30px;}
+
+.accordion-list span.rotate{transform: rotate(0deg);}
+
+.accordion-name>a.back-li{background-color: #205781; color: #fff;}
+.accordion-list .accordion-name ul.back-ul{background-color: #B9DFE3;} 
+.accordion-name ul>li{padding: 20px 0 20px 30px; font-size: 18px;}
+.accordion-desc a{color: #000;}
+
+
+/* 미디어쿼리 */
+@media (max-width:1600px) {
+header>div{width: 80%; left: 10%; }
+ }
+@media (max-width:1160px) {
+header>div{width: 90%; left: 5%; }
+ }
+
+@media (max-width:991px) {
+header{height: 90px; padding: 10px 20px; background-color: transparent;}
+header .icon a.mo_change{color:#000}
+header nav{display: none;}
+#mo-menu-box{top:0px; right:-1000px;}
+
+header .icon{display: block; position: fixed; right: 15px; top: 20px;}
+header .icon a{padding: 0 20px; font-size: 35px; color: #fff; vertical-align: middle;}
+header .logo{/* position: fixed;  left: 20px; top: 15px; */ display: inline-block; vertical-align: middle; 
+  margin-top: 5px; margin-left: 5px;}
+header .logo a{font-size: 44px; letter-spacing: -2px;}
+/* header .logo span{vertical-align: middle; display: none; font-size: 24px;}
+header .logo span.show_txt{display: inline-block; margin-top: -15px;} */
+
+
+                          .pc-banner, .mo-banner{display: none;}
+                          .tb-banner{display: block;}
+
+                          .banner{margin-top: 0; display: block;}
+                        
+                        
+footer{margin-bottom: 115px;}
+footer .flex-box>div{padding: 20px;}
+footer .flex-box>div:nth-child(1){order: 3; width: 100%; text-align: start;
+  border-top:  grey 1px solid;}
+footer .flex-box>div:nth-child(2){width: 50%; border-left: 0;
+border-right: 0;}
+footer .flex-box>div:nth-child(3){order: 1;width: 50%;}
+
+.under{position: fixed;}
+.under .flex-box>div:nth-child(1){width: 55%;}
+.under .flex-box>div:nth-child(2){display: block;}
+.under .flex-box>div:nth-child(3){width: 15%;}
+.under .flex-box>div:nth-child(4){width: 15%;}}
+
+
+@media (max-width:767px) {header{height: 65px;}
+header .icon{margin-top: -3px;}
+  header .icon a{padding: 0 10px; font-size: 22px;}
+header .logo{margin-top: 0; margin-left: 0;}
+header .logo a{font-size: 34px;}
+
+                          .pc-banner, .tb-banner{display: none;}
+                          .mo-banner{display: block;}
+
+                          .banner{margin-top: 0; display: block;}
+
+footer{margin-bottom: 115px;}
+footer .flex-box>div{padding: 20px; text-align: left;}
+footer .flex-box>div:nth-child(1){order: 3; width: 100%; text-align: start;
+  border-top:  grey 1px solid;}
+footer .flex-box>div:nth-child(2){order: 1; width: 100%; border-left: 0;}
+footer .flex-box>div:nth-child(3){order: 2; width: 100%;}
+
+
+
+.under{position: fixed;}
+
+.under img{width: 40px;}
+
+.under .notice span:nth-child(1){color: #000; display: inline-block; width: 80px; text-align: center;
+padding: 5px 0; margin-right: 20px; border-radius: 40px; background-color: #fff; font-size: 16px;
+font-weight: bold;}
+.under .notice span:nth-child(2){display: none;}
+
+
+
+
+.under .flex-box>div:nth-child(1){width: 55%;}
+.under .flex-box>div:nth-child(2){display: block;}
+.under .flex-box>div:nth-child(3){width: 15%;}
+.under .flex-box>div:nth-child(4){width: 15%;}
+
+.under p{display: none;}
+
+
+.accordion-name >a{font-size: 18px; padding: 5px;
+vertical-align: middle;}
+.accordion-name ul>li{font-size: 16px;}
+
+.accordion-list{transform: translate(-6%);}
+.accordion-list span{margin-right: 5px;}
+header .logo span.show_txt{display: none;}
+
+
+}
+
+@media (max-width:400px) {
+  
+}

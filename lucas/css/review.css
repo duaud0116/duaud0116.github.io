@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+
+/* 배너 */
+
+.sub-menu{margin-top: -60px;}
+.sub-menu ul{background-color: #fff; margin: auto;}
+.sub-menu ul li{display: inline-block; padding: 10px 50px; font-size: 18px;}
+.sub-menu ul li a{color: #000;}
+.sub-menu ul li:nth-child(2) a:nth-child(1){color: #205781; font-weight: bold;}
+
+.cont1{margin: auto; margin-top: 100px; margin-bottom: 100px;}
+.cont1 .flex-box>div{width: 50%; padding: 10px;}
+.cont1 .review{position: relative;  border: #205781 2px solid; padding: 20px 20px; border-radius: 20px; height: 28vh;}
+.cont1 .review span{position: absolute; bottom: 20px; left: 20px; color: gray; }
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+@media (max-width:1340px) {
+    .medical .list img{width: 60px; height: 60px;}
+    .medical .text{font-size: 14px;}
+    .list span{font-size: 16px;}
+}
+
+
+
+@media (max-width:1200px) {
+    .medical .list img{display: block; margin: 20px auto;}
+    .medical .text{width: 90%;margin: auto; text-align: center;}
+    .list span{font-size: 16px;}
+    .medical .list>div{height: 230px;}
+
+
+}
+@media (max-width:991px) {
+
+.sub-menu{margin-top: -60px;}
+.sub-menu ul li{padding: 10px 30px;}
+
+
+}
+
+@media (max-width:767px) {
+
+.cont1{margin-top: 50px;}
+.sub-menu ul{width: 95%; text-align: center;}
+.sub-menu{margin-top: -50px;}
+.sub-menu ul li{padding: 10px ; font-size: 16px;}
+
+.cont1 .flex-box>div{width: 100%; padding: 20px;}
+
+.cont1 .review{height: auto; padding-bottom: 40px;}
+
+
+}

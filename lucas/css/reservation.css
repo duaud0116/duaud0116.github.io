@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+
+/* 배너 */
+
+.sub-menu{margin-top: -60px;}
+.sub-menu ul{background-color: #fff; margin: auto;}
+.sub-menu ul li{display: inline-block; padding: 10px 50px; font-size: 18px;}
+.sub-menu ul li a{color: #000;}
+.sub-menu ul li:nth-child(1) a:nth-child(1){color: #205781; font-weight: bold;}
+
+/* ---------------------------------------------------------------------------------------- */
+.cont1{text-align: left; margin-top: 50px; }
+.cont1 h3{margin: 70px 0 20px 0; padding-left: 150px; font-size: 20px;}
+.reservation{border: #000 solid 1px; padding: 20px; width: 70%; margin: auto; margin-top: 20px;}
+
+
+.day{width: 70%; margin: auto; border: 1px solid #000;}
+
+
+
+/* 달력 */
+
+table, th, td {text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+tr {
+    height: 60px;
+
+}
+
+td {
+    width: 76px;
+    padding: 5px;
+}
+
+
+#date {
+    margin-top: 10px;
+    font-size: 18px;
+    margin-left: 16px;
+    list-style-type: none;
+}
+
+#sched_tbl {
+    margin-top: 15px;
+
+}
+
+#day {
+    height: 20px;
+color: gray;
+    font-weight: 500;
+    text-align: center;
+}
+
+.red {
+    color: rgb(202, 0, 0);
+}
+
+.blue {
+    color: #205781;
+}
+
+
+.res{padding: 20px 10px; width: 50%;}
+.res p{margin-bottom: 10px;}
+.res .date{border: #000 1px solid; padding: 5px; margin-bottom: 20px; width: 80%; margin-left: 10px;}
+
+.res .flex-box>div{width: 33.33%;  text-align: center; padding: 10px;
+     }
+.res .time{border: #000 1px solid;padding: 5px;border-radius: 60px;}
+
+.aa{position: relative; color: #fff;}
+.td-circle{background-color: #205781; position: absolute; width: 50px; height: 50px;
+    border-radius: 50%; left:50%;top:50%; transform: translate(-50%,-50%);color:#fff; z-index: -1;}
+
+.underline{border: 1px solid gray;}
+
+.writebox{width: 70%;  margin: auto;
+border: #000 1px solid;padding: 5px;
+}
+
+.writebox>div{margin: 20px 0;}
+.writebox span{width: 15%;display: inline-block; text-align: center;vertical-align: middle; }
+.writebox .select{display: inline-block; width:70% ; vertical-align: middle; border-bottom: 1px solid gray; margin-left: 10px;}
+.writebox .select select{width: 100%; padding: 10px;vertical-align: middle;
+outline: 0; border: 0;}
+
+.writebox input{border: 0; outline: 0; border-bottom: 1px solid gray; padding: 10px; width:70%; margin-left: 10px;}
+
+
+
+
+
+/* 미디어쿼리-------------------------------------------------------------------------- */
+
+
+@media (max-width:991px) {
+
+.sub-menu{margin-top: -60px;}
+.sub-menu ul li{padding: 10px 30px;}
+
+.cont1 h3{margin: 60px 0 20px 0; padding-left: 50px;}
+.reservation, .day, .writebox{width: 85%;}
+
+.writebox .select{width:70% ; margin-left: 10px;}
+
+
+}
+
+
+
+@media (max-width:767px) {
+
+
+
+.sub-menu{margin-top: -50px;}
+.sub-menu ul li{padding: 10px 20px; font-size: 16px;}
+
+
+table{width: 100%;}
+.res{width: 100%; margin-top: 10px;}
+
+.cont1 h3{padding-left: 10px; font-size: 18px;}
+.reservation, .day, .writebox{width: 95%;}
+
+
+.writebox span{width: 20%; font-size: 16px;}
+
+#date{margin-left: 0; text-align: center;}
+
+}
+
+@media (max-width:400px) {.writebox span{width: 25%;}
+    .writebox .select{width:70% ; margin-left: 0;}
+    .writebox input{margin-left: 0;}
+
+
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://kit.fontawesome.com/9651c31e05.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="img/favicon-16x16.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=keyboard_arrow_up" />
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+
+
+<title></title>
+<style>
+
+/* 모달창 */
+
+.modal {
+    display: block;  
+    
+    position: fixed;
+    left: 0;
+    top: 0;    
+
+    overflow-y: auto;
+    
+    width: 100%;
+    height: 100%;   
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 9000; /* z-index는 반드시 들어가야 한다 */ 
+    text-align: center;
+}
+
+.modal h2{font-size: 30px; color: #333333; margin-top: 25px;}
+
+.modal-wrap {
+  
+    position: absolute;
+    left: 20%;/* 항상 수평 영역의 중앙에 위치하도록 설정 */
+    top: 70px;
+    
+    display: block;
+    width:60%;
+    
+    padding-bottom:50px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+
+
+.modal-close {
+    position: fixed;
+    right: 40px;
+    top: 20px;
+
+    display: block;
+    width: 50px;
+  
+
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.modal-close img{width: 50px;}
+
+
+</style>
+</head>
+<body>
+<main>
+    <header>
+      <div class="headerbox">
+        <div class="logo"><a href="index.html">LUCAS</a> 
+        <!-- <span>루카스건강검진센터</span> --></div>
+         <!-- 테블릿/모바일 아이콘 -->
+    
+        <div class="icon">
+          <a href="#" id="tbmo-profile"><i class="fa-regular fa-user"></i></a>  
+          <a href="#" id="tbmo-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+          <a href="#" id="tbmo-menu"><i class="fa-solid fa-bars"></i></a>          
+        </div>
+         <!-- 테블릿/모바일 아이콘 end-->        
+        <nav>
+          <ul class="container flex-box">
+            <li><a href="#">루카스 소개</a></li>
+            <li><a href="#">건강검진</a></li>
+            <li><a href="#">내과 & 도수 치료</a></li>
+            <li><a href="#">예약 및 문의</a></li>
+            <li><a href="#">커뮤니티</a></li>
+          </ul>
+        </nav>
+
+
+        <!-- 서브메뉴  -->
+            <div class="sub">
+                  <div class="sub-box flex-box container">
+                      <ul class="sub-1">
+                        <li><a href="#">인삿말</a></li>
+                        <li><a href="#">의료진 소개</a></li>
+                      </ul> 
+                      <ul class="sub-2">
+                        <li><a href="examination.html">건강보험 검진</a></li>
+                        <li><a href="#">특화된 종합검진</a></li>
+                        <li><a href="#">프리미엄 검진</a></li>
+                        <li><a href="#">A+ 2729 암검사</a></li>
+                      </ul>
+                      <ul class="sub-3">
+                        <li><a href="#">내과 진료</a></li>
+                        <li><a href="#">도수 치료</a></li>
+                      </ul>
+                      <ul class="sub-4">
+                        <li><a href="reservation.html">예약하기</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                      </ul>         
+                      <ul class="sub-5">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="review.html">진료 후기</a></li>
+                        <li><a href="#">고객의 소리</a></li>
+                      </ul>         
+                </div>  <!--sub-box 끝-->
+            </div> <!--sub 끝-->
+
+
+          
+        
+      </div>
+
+
+
+
+    </header>
+
+    <section class="banner">
+      <img src="img/mct09_img.png" alt="" class="pc-banner">
+      <img src="img/tb-banner.png" alt="" class="tb-banner">
+      <img src="img/mo-banner.png" alt="" class="mo-banner">
+    </section>
+
+
+    <section class="cont1 container">
+      <p>진료 분야<br><br></p>
+      <div class="line"></div>
+      <h3>치료를 넘어 치유의 빛으로-<br>인본주의 의학그룹 루카스 건강검진센터</h3>
+      <div class="flex-box">
+        <div>
+          <img src="img/conditions.png" alt=""><p>건강검진</p>
+        </div>
+        <div>
+          <img src="img/stethoscope.png" alt=""><p>내과</p>
+        </div>
+        <div>
+          <img src="img/massage.png" alt=""><p>도수<br> 치료</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="cont2 container">
+        <p>병원 소개<br><br></p>
+        <div class="line"></div>
+        <span>“아플 때나 건강할 때나<br> 늘 고마운 친구처럼”</span>
+        <div class="flex-box">
+          <div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                        <div>
+                          <img src="img/doctor1-1.png" alt="">
+                          <h2>대표원장 김영희</h2>
+                      </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img src="img/doctor-2-1.png" alt="">
+                      <h2>가정의학과 김철수</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img src="img/doctor-3-1.png" alt="">
+                      <h2>소화기내과 이지연</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img src="img/doctor-4-1.png" alt="">
+                      <h2>내시경전문의 박지혜</h2>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div>
+                      <img src="img/doctor-5-1.png" alt="">
+                      <h2>영상의학과 정지윤</h2>
+                    </div>
+                  </div>
+                </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+             <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div>
+            루카스 건강검진센터는 병의 진단과 치료 이전에, 사람을 먼저 생각합니다. <br>
+            한 사람, 한 사람과 진심으로 마주하며 소통하고 마음에서부터 치유가 시작<br>
+            될 때 비로소 아픔도, 병도 치료할 수 있기 때문입니다.<br><br>
+            진심어린 마음으로 의술을 넘어 사랑을 행하는 병원,<br>
+            지속 가능한 교육과 복지로 직원들이 행복한 병원,<br><br>
+            “아플 때나 건강할 때나 늘 고마운 친구처럼”<br>
+            건강검진 NO.1<br>
+            루카스 건강검진센터는 여러분과 함께 하겠습니다.
+          </div>
+        </div>
+
+        
+
+
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <section class="cont3 container">
+      <p>오시는 길<br><br></p>
+      <div class="line"></div>
+      <h2>경기도 안산시 단원구 광덕2로 164<br>메디피아 4층 신도시법원앞</h2>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.3889493778383!2d126.82833830000001!3d37.3096135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b6fe58170ea7d%3A0x3771268b02dc2c1e!2z66Oo7Lm07Iqk6rG06rCV6rKA7KeE7IS87YSwIOujqOy5tOyKpOuCtOqzvA!5e0!3m2!1sko!2skr!4v1754365338861!5m2!1sko!2skr" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+    </section>
+</main>
+
+<!-- 모달1 구역 -->
+<div class="modal" >
+    <div class="modal-wrap">
+        <div class="modal-body">
+                <h2>페이지 상세 설명</h2>
+                <img src="img/lucas-explain.png">                               
+                <span class="modal-close"><img src="img/close_50dp_fff.png" alt=""></span>
+        </div>
+    </div>   
+</div>
+
+
+
+
+
+
+
+
+<footer>
+  <div class="flex-box container">
+    <div>
+      <p class="footertitle">루카스건강검진센터 | 루카스내과의원</p><br>
+        <a href="#">개인정보처리방침 ㅣ 이메일무단수집거부</a><br>
+        사업자등록번호   369-91-00509<br>
+        대표자 송해정<br><br>
+  © 2025. TRUEHAPPY. ALL RIGHTS RESERVED
+    </div>
+    <div>
+      <p class="footertitle">대표번호</p><br>
+        진료센터 : 1833-5113<br>
+        검진센터 : 1833-6244
+    </div>
+    <div>
+      <p class="footertitle">진료시간</p><br>
+        평일 : 9:00~17:00 <br>
+        토요일 : 09:00~13:00<br>
+        (점심시간 : 13:00~14:00)
+    </div>
+  </div>
+</footer>
+
+  <div class="under">
+    <div class="flex-box container">
+      <div>
+        <div class="notice">
+          <span>공지</span><span>8월 휴진 공지</span>
+        </div>
+      </div>
+      <div>
+        <img src="img/call_.png" alt="">
+        <p>전화하기</p>
+      </div>
+      <div>
+        <a href="reservation.html">
+          <img src="img/calendar_month.png" alt="">
+          <p>예약하기</p>
+        </a>
+      </div>
+      <div>
+        <img src="img/chat.png" alt="">
+        <p>톡톡</p>
+      </div>
+    </div>
+  </div>
+
+
+<div id="mo-menu-box" >    <!-- width:100%; height : 100vh ; fixed -->
+   <div class="mo-menu-box-cont">
+
+
+    <div class="menu">
+
+      <ul class="accordion-list">
+          <li class="accordion-name">
+            <a href="#">루카스 소개 
+              <span class="material-symbols-outlined">keyboard_arrow_up</span>
+            </a>         
+              <ul>
+                  <li class="accordion-desc">
+                    인삿말
+                  </li>        
+                  <li class="accordion-desc">
+                    의료진 소개
+                  </li>
+              </ul>
+          </li>    
+
+          <li class="accordion-name">
+            <a href="#">건강검진<span class="material-symbols-outlined">keyboard_arrow_up</span></a>         
+              <ul>
+                  <li class="accordion-desc">
+                    <a href="examination.html">건강보험 검진</a>
+                  </li>        
+                  <li class="accordion-desc">
+                  특화된 종합검진
+                  </li>
+                  <li class="accordion-desc">
+                  프리미엄 검진
+                  </li>
+                  <li class="accordion-desc">
+                  A+ 2729 암검사
+                  </li>
+              </ul>
+          </li>    
+
+          <li class="accordion-name">
+            <a href="#">내과 & 도수 치료<span class="material-symbols-outlined">keyboard_arrow_up</span></a>         
+              <ul>
+                  <li class="accordion-desc">
+                    내과 진료
+                  </li>        
+                  <li class="accordion-desc">
+                  도수 치료
+                  </li>                
+              </ul>
+          </li>     
+
+          <li class="accordion-name">
+            <a href="#" >예약 및 문의<span class="material-symbols-outlined">keyboard_arrow_up</span></a>         
+              <ul>
+                  <li class="accordion-desc">
+                    <a href="reservation.html">예약하기</a>
+                  </li>        
+                  <li class="accordion-desc">
+                  1:1 문의
+                  </li>                
+              </ul>
+          </li>     
+
+          <li class="accordion-name">
+            <a href="#">커뮤니티<span class="material-symbols-outlined">keyboard_arrow_up</span></a>         
+              <ul>       
+                  <li class="accordion-desc">
+                  공지사항
+                  </li>                
+                  <li class="accordion-desc">
+                  <a href="review.html">진료 후기</a>
+                  </li>                
+                  <li class="accordion-desc">
+                  고객의 소리
+                  </li>                
+              </ul>
+          </li>     
+          
+          
+      </ul>
+
+    </div>  <!-- menu end -->
+  </div>  <!-- mo-menu-box-cont end -->
+</div>   <!-- #mo-menu-box  end -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+   $(function(){
+    $('.modal-close').click(
+        function(){
+            $('.modal').hide();
+        } );
+
+   });
+</script>
+
+<script src="js/common.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+       pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+    });
+  </script>
+</body>
+</html>
