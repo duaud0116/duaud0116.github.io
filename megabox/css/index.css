@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+
+
+a{color: #fff; cursor: pointer;}
+
+
+/* 헤더 */
+
+header .logo-p{display: none;  width: 150px; 
+                        left: 100px; top: 50px;}
+
+/* ---------------------------------------------------------------- */
+
+
+
+.tr-banner .pc-tb{display: block; margin-top: 115px;}
+.tr-banner .phone{display: none;}
+
+
+/* 햄버거 버튼, 태블릿-모바일 로고(퍼플) */
+
+.headmenu{display: none; }
+.headmenu >div{display: inline-block; margin: 15px 20px; vertical-align: middle;}
+
+
+/* 박스오피스 , 이벤트, 오리지널 티켓, 스페셜관 */
+
+section.poster{position: relative;}
+section.poster .booking{border-radius: 5px; background-color: #252451; border: #252451 1px solid;
+    padding: 10px; font-size: 16px; margin-top: 10px;}
+section.poster .booking:hover{background-color: #fff;
+                            border: #252451 1px solid; cursor: pointer;}
+section.poster  .booking:hover a{color: #252451;}
+section.event{margin-top: 20px;}
+section.event .swiper-pagination{display: none;}
+
+h1{font-size: 30px; margin: 50px 0 20px 0;}
+
+
+section.ot{width: 1000px; border: 1px gray solid; border-radius: 10px;
+    /*  background-color: red; */ margin-top: 100px; margin-bottom: 100px;}
+.ot .flex-box{padding: 40px 30px;}
+.ot .flex-box>div{display: inline-block; padding: 20px;}
+.ot .flex-box>div>h2{text-align: center; font-size: 20px;}
+.ot .flex-box>div:nth-child(1){width: 30%;}
+.ot .flex-box>div:nth-child(2){width: 35%;}
+.ot .flex-box>div:nth-child(3){width: 35%;}
+
+.event, .special{position: relative;}
+.swiper-button-next:after, .swiper-button-prev:after{position: absolute;}
+
+.event .swiper-button-next, .event .swiper-button-next:after{margin-left: 5px;}
+.event .swiper-button-prev, .event .swiper-button-prev:after{margin-right: 5px;}
+
+
+.notice{width:800px; margin-top: 150px; margin-bottom: 100px;}
+.notice .flex-box>div{border-radius: 5px; padding: 10px 0; margin: auto;}
+.notice .flex-box>div:nth-child(1){width: 10%; background-color: #252451; 
+    color: #fff; border-radius: 7px 0 0 7px; text-align: center;}
+.notice .flex-box>div:nth-child(2){width: 90%; background-color: rgb(222, 222, 222);
+border-radius: 0 7px 7px 0; padding-left: 20px;}
+
+.customer{width: 800px; margin-bottom: 100px; text-align: center;}
+.customer .flex-box>div{width: 25%; padding: 0 20px;}
+.customer .flex-box>div img{width: 100px; margin-bottom: 10px;}
+.customer .flex-box>div p{color: #000;}
+
+
+/* 예매하기, TOP 버튼 -------------------------------------------------- */
+
+.reservation, .top{display: inline-block; text-align: center; line-height: 50px;}
+.reservation{width: 180px; height: 50px; border-radius: 40px; background-color: #252451;
+    position: fixed; right: 80px; bottom: 40px; z-index: 1; cursor: pointer; transition: all 0.5s;}
+.bt_top{width: 50px; height: 50px; border-radius: 50%; background-color: rgb(222, 222, 222);
+    position: fixed; right: 20px; bottom: 40px; z-index: 1; cursor: pointer; line-height: 50px;
+    text-align: center; transition: all 0.5s;}
+
+.bt_top a{color: #000;}
+
+
+
+
+/* 모바일 메뉴 박스 ---------------------------------------------------- */
+
+#mo-menu-box{width:100%; height : 100% ; position: fixed; z-index: 1000; 
+    background-color: #fff; top:0px; right:-1000px; transition: all 0.5s; display: none;
+text-align: center;}
+
+#mo-menu-box a{color: #000;}
+#mo-menu-box .mb-head.flex-box{width: 90%; justify-content: space-between; margin: auto;
+                                padding-top: 20px; vertical-align: middle;}
+#mo-menu-box .mb-head i{font-size: 15px;}
+
+#mo-menu-box .my{width: 90%; justify-content: space-between; align-items: center; margin: auto;
+                margin-top: 30px; margin-bottom: 30px;}
+#mo-menu-box .my .profile>div{width: 50%; margin: auto;}
+
+#mo-menu-box .my .mymenu{width: 90px; height: 30px; background-color: #660ED8;
+    border-radius: 30px; color: #fff; line-height: 30px;}
+
+
+
+#mo-menu-box .mo-menu-box-cont{background-color: yellow; overflow: auto; position: absolute; height: 100%; width: 100%;left: 0;top:0;}
+#mo-menu-box .point{width: 80%; border: 1px solid grey; border-radius: 10px; margin: auto;}
+#mo-menu-box .point>div, #mo-menu-box .reserv>div{width: 33.33%; padding: 10px;}
+#mo-menu-box .point>div:nth-child(1), #mo-menu-box .point>div:nth-child(2)
+{border-right: solid 1px grey;}
+
+#mo-menu-box .reserv{width: 90%; margin: auto; margin-top: 20px; margin-bottom: 20px;}
+#mo-menu-box .reserv img{width: 30px; height: 30px;}
+
+.mb-service, .mb-benefit, .mb-customer{margin-bottom: 20px;}
+
+.mb-service .flex-box, .mb-benefit .flex-box, .mb-customer .flex-box{width: 80%; margin: auto;}
+h3{text-align: left; padding-left: 25px; margin-bottom: 20px;}
+
+
+.mb-service .flex-box ul, .mb-benefit .flex-box ul, .mb-customer .flex-box ul{width: 50%; 
+    padding: 0 20px; text-align: center; }
+.mb-service .flex-box ul li, .mb-benefit .flex-box ul li, .mb-customer .flex-box ul li
+{padding: 10px 0;}
+
+.mb-notice{width: 70%; margin: auto; margin-top: 70px; margin-bottom: 50px; font-size: 20px;}
+.mb-notice .flex-box>div{border-radius: 7px; padding: 7px 0;}
+.mb-notice .flex-box>div:nth-child(1){width: 20%; background-color: #252451; 
+    color: #fff; border-radius: 5px 0 0 5px; text-align: center;}
+.mb-notice .flex-box>div:nth-child(2){width: 80%; background-color: rgb(222, 222, 222);
+border-radius: 0 7px 7px 0; text-align: left; padding-left: 10px;}
+
+
+
+/* 캡션 작업 ----------------------------------------------------------------- */
+.swiper-slide{position: relative;}
+
+.swiper-slide img{display: block;}
+
+.swiper-slide > div p{position: absolute;}
+.caption{position: absolute; ;  background-color: #252451 ;
+           opacity:0; border-radius: 10px; cursor: pointer;
+           
+        width:calc(100%);
+        height:calc(100%);}
+
+
+/* 스와이퍼 ================================================================== */
+
+:root {--swiper-theme-color: #252451;}
+
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+.swiper-button-next:after, .swiper-button-prev:after{font-size: 30px;}
+
+.swiper-button-next, .swiper-button-prev{border-radius: 50%; width: 50px; height: 50px;
+            background-color: rgba(255,255,255,0.5); padding: 10px;}
+
+.event .swiper-button-next{margin-right: 10px;}
+.event .swiper-button-prev{margin-left: 10px;}
+
+
+/* ------------------------------------------------------------------------- */
+
+
+
+/* 미디어쿼리 */
+
+@media (max-width:991px) {header{background-color: #fff;}
+
+                        header nav, header .logo{display: none;}
+                        .headmenu{display: inline-block; margin: 0;}
+                        .headmenu .logo-p{width: 150px; margin-left: -5px;}
+                        #bt i{font-size: 20px; color: #000; }
+
+                        .tr-banner .pc-tb{display: block; margin-top: 65px;}
+                        
+                        h1{font-size: 20px; margin: 50px 0 15px 0;}
+
+                        .swiper-button-next, .swiper-button-prev{display: none;}
+
+                        section.poster .booking{color: #660ED8; border: #660ED8 1px solid;}
+                        section.poster .booking a:hover{color: #660ED8;}
+                        section.event .swiper{padding-bottom: 40px;}
+                        section.event .swiper-pagination{display: block;text-align: right;padding-right: 30px;}
+
+                        section.poster  .booking{border-radius: 7px; 
+                            background-color: #660ED8; padding: 10px; font-size: 14px; 
+                            margin-top: 10px;}
+                        section.poster .booking:hover{background-color: #fff; 
+                            border: #660ED8 1px solid;}
+
+                        section.ot{width: 80%}
+                        .ot .flex-box{padding: 30px 20px;}
+                        .ot .flex-box>div>h2{font-size: 14px;}
+
+                        .reservation{background-color: #660ED8; width: 170px; height: 40px;
+                        line-height: 40px;}
+
+                        .bt_top{width: 40px; height: 40px; line-height: 40px;}
+
+                        .caption{background-color: #660ED8 ;}
+
+                        .footer-tbmb{display: block; padding-top: 10px;}
+                        .pc{display: none;}
+
+                        #mo-menu-box{display: block; }
+                        #mo-menu-box .point{width: 90%;}
+                        #mo-menu-box .mb-head i{font-size: 30px;}
+                        #mo-menu-box .mb-notice{width: 700px; font-size: 16px; padding: 10px 0;}
+
+                        h3{padding-left: 80px;}
+                    
+                    }
+
+
+
+                        
+
+
+
+@media (max-width:767px) {header{background-color: #fff;}
+
+                        header nav, header .logo{display: none;}
+                        .headmenu{display: inline-block; margin: 0;}
+                        .headmenu .logo-p{width: 140px; padding-left: -20px;}
+                        #bt i{font-size: 25px; color: #000; }
+
+                        
+                        h1{font-size: 20px; margin: 40px 0 10px 0;}
+                                 
+                        .poster  .booking a:hover{color: #660ED8;}
+
+
+                        .tr-banner .phone{display: block; margin-top: 65px;}
+                        .tr-banner .pc-tb{display: none;}
+
+
+             
+
+                        .swiper-button-next, .swiper-button-prev{display: none;}
+
+                        section.poster  .booking{border-radius: 7px; 
+                            background-color: #660ED8; padding: 10px; font-size: 14px; 
+                            margin-top: 10px;}
+                        section.poster .booking:hover{background-color: #fff; 
+                            border: #660ED8 1px solid;}
+                        section.poster .booking a:hover{color: #660ED8;}
+                        
+
+
+                        section.ot{display: none;}
+                        .notice, .customer{display: none;}
+
+                        .reservation, .bt_top{display: none;}
+
+                        .caption{background-color: #660ED8 ;}
+                        .footer-tbmb{display: block; padding: 10px 0;}
+                        .footer-tbmb img{width: 100px;}
+                        .pc{display: none;}
+
+                        #mo-menu-box{display: block;}
+                        h3{padding-left: 25px;}
+
+                        #mo-menu-box .mb-head.flex-box{width: 90%; padding-top: 15px;
+                            vertical-align: middle;}
+                        #mo-menu-box .mb-head i{font-size: 25px;}
+
+                        #mo-menu-box .mb-notice{width: 80%; font-size: 12px; padding: 10px 0;}
+
+                        h2{font-size: 16px;}
+
+                        #mo-menu-box span, p, a{font-size: 14px;}
+
+
+
+
+
+
+}
+

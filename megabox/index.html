@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="shortcut icon" href="img/favicon.jpg" />
+
+<script src="https://kit.fontawesome.com/9651c31e05.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+
+<title>MEGABOX</title>
+<style>
+
+
+/* 모달창 */
+
+.modal {
+    display: block;  
+    
+    position: fixed;
+    left: 0;
+    top: 0;    
+
+    overflow-y: auto;
+    
+    width: 100%;
+    height: 100%;   
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 900; /* z-index는 반드시 들어가야 한다 */ 
+}
+
+.modal h2{text-align: center; font-size: 30px; color: #333333; margin-top: 25px;}
+
+.modal-wrap {
+  
+    position: absolute;
+    left: 20%;/* 항상 수평 영역의 중앙에 위치하도록 설정 */
+    top: 100px;
+    
+    display: block;
+    width:60%;
+    
+    padding-bottom:50px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+
+
+.modal-close {
+    position: fixed;
+    right: 40px;
+    top: 20px;
+
+    display: block;
+    width: 50px;
+  
+
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.modal-close img{width: 50px;}
+
+</style>
+</head>
+<body>
+<main>
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/1-mb-logo.png" alt=""></a></div>
+    <div class="line"></div>
+        <!-- 햄버거 버튼, 태블릿, 모바일 로고 -->
+    <div class="headmenu flex-box">
+            <div id="bt"><a href="#"><i class="fa-solid fa-bars"></i></a></div> 
+            <div class="logo-p"><a href="#"><img src="img/1-logo_purple.jpg" alt=""></a></div> 
+    </div>
+        <nav>
+            <ul class="container menu flex-box">
+                <li><a href="#">영화</a></li>
+                <li><a href="#">극장</a></li>
+                <li><a href="#">예매</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">스토어</a></li>
+            </ul>
+
+
+
+    <div class="line"></div>
+        <div class="sub-menu-box">
+            <div class="container sub-menu flex-box">
+                <ul>
+                    <li><a href="#">전체영화</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">전체극장</a></li>
+                    <li><a href="#">특별관</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">빠른예매</a></li>
+                    <li><a href="#">상영시간표</a></li>
+                    <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">진행중 이벤트</a></li>
+                    <li><a href="#">지난 이벤트</a></li>
+                    <li><a href="#">당첨자발표</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">새로운 상품</a></li>
+                    <li><a href="#">메가티켓</a></li>
+                    <li><a href="#">팝콘/음료/굿즈</a></li>
+                    <li><a href="#">포인트몰</a></li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <section class="tr-banner">
+        <img src="img/1-tr-banner.jpg" alt="" class="pc-tb">
+        <img src="img/1-tr-banner-mb.jpg" alt="" class="phone">
+    </section>
+
+    <section class="poster container">
+        <h1>박스오피스</h1>
+        <!-- 첫번째 스와이퍼 -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div>                            
+                            <a href="#"><img src="img/1-poster1.jpg" alt="" ></a>
+                            <div class="booking"><a href="#">예매하기</a></div>                            
+                        </div>
+                </div>                        
+                <div class="swiper-slide">
+                        <div>
+                            <a href="#"><img src="img/1-poster2.jpg" alt=""></a>     
+                            <div class="booking "><a href="#">예매하기</a></div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                       
+                        <a href="sub.html"><img src="img/1-poster3.jpg" alt="" ></a>
+                        <div class="booking "><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                            
+                        <a href="#"><img src="img/1-poster4.jpg" alt="" ></a>
+                        <div class="booking"><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                            
+                        <a href="#"><img src="img/1-poster5.jpg" alt="" ></a>
+                        <div class="booking "><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                            
+                        <a href="#"><img src="img/1-poster1.jpg" alt="" ></a>
+                        <div class="booking"><a href="#">예매하기</a></div>                            
+                    </div>
+                </div>                        
+                <div class="swiper-slide">
+                    <div>
+                        <a href="#"><img src="img/1-poster2.jpg" alt=""></a>     
+                        <div class="booking "><a href="#">예매하기</a></div>
+                    </div>
+                 </div>
+                <div class="swiper-slide">
+                    <div>                       
+                        <a href="sub.html"><img src="img/1-poster3.jpg" alt="" ></a>
+                        <div class="booking "><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                            
+                        <a href="#"><img src="img/1-poster4.jpg" alt="" ></a>
+                        <div class="booking"><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>                            
+                        <a href="#"><img src="img/1-poster5.jpg" alt="" ></a>
+                        <div class="booking "><a href="#">예매하기</a></div>
+                    </div>
+                </div>
+            </div>
+                
+            
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
+
+    <section class="event container">
+        <h1>이벤트</h1>
+        <!-- 두번째 스와이퍼 -->
+        <div class="swiper mySwiper_2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">                  
+                        <a href="#"><img src="img/1-banner1.jpg" alt="" ></a>    
+                </div>
+                <div class="swiper-slide">                  
+                        <a href="#"><img src="img/1-banner2.jpg" alt="" ></a>    
+                </div>
+                <div class="swiper-slide">                  
+                        <a href="#"><img src="img/1-banner3 1.png" alt=""></a>    
+                </div>
+                <div class="swiper-slide">                  
+                        <a href="#"><img src="img/1-banner4 1.png" alt="" ></a>    
+                </div>
+
+            </div><!-- swiper-wrapper end -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+       
+    </div> <!-- swiper end -->
+    </section>
+
+    <section class="ot container" data-aos="fade-up" data-aos-duration="1000">
+        <div class="flex-box">
+            <div>
+                <img src="img/1-ot.jpg" alt="">
+            </div>
+            <div>
+                <img src="img/1-ot1.jpg" alt="">
+                <h2><드래곤 길들이기></h2>
+            </div>
+            <div>
+                <img src="img/1-ot2.jpg" alt="">
+                <h2><미션 임파서블 : 파이널 레코닝></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="special container">
+        <h1>스페셜관</h1>
+        <!-- 세번째 스와이퍼 -->
+        <div class="swiper mySwiper_3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema1.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema2.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema3.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema4.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema5.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/1-cinema6.jpg" alt=""></a>
+                    <div class="caption"> <!-- 앱솔루트 -->
+                    </div>  <!-- caption 종료 --> 
+                </div>
+
+            </div> <!-- swiper-wrapper end -->
+      
+      
+      <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </div>
+        
+    </section>
+
+    <section class="notice container">
+        <div class="flex-box">
+            <div>공지</div>
+            <div>[GS&POINT] 시스템 정기 점검 안내 (6/19)</div>
+        </div>
+    </section>
+
+    <section class="customer container">
+        <div class="flex-box">
+            <div>
+                <a href="#"><img src="img/customer-1.jpg" alt=""></a>
+                <a href="#"><p>고객센터</p></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/customer-2.jpg" alt=""></a>
+                <a href="#"><p>자주 묻는 질문</p></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/customer-3.jpg" alt=""></a>
+                <a href="#"><p>1:1 문의</p></a>
+            </div>
+            <div>
+                <a href="#"><img src="img/customer-4.jpg" alt=""></a>
+                <a href="#"><p>단체/대관 문의</p></a>
+            </div>
+        </div>
+
+
+
+    </section>
+
+</main>
+
+<!-- 모달1 구역 -->
+<div class="modal" >
+    <div class="modal-wrap">
+        <div class="modal-body">
+                <h2>페이지 상세 설명</h2>
+                <img src="img/megabox-explain.png">                               
+                <span class="modal-close"><img src="img/close_50dp_fff.png" alt=""></span>
+        </div>
+    </div>   
+</div>
+
+
+
+
+
+
+
+<!-- 예매하기, TOP 버튼 -->
+<div class="reservation" id="reservation">
+    <a href="#"><p>예매하기</p></a>
+</div>
+
+<div class="bt_top" id="bt_top">
+      <a href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+
+<footer>
+    <div class="flex-box container pc">
+        <ul>
+            <li>회사소개</li>
+            <li>인재채용</li>
+            <li>사회공헌</li>
+            <li>제휴/광고/부대사업문의</li>
+            <li>이용약관</li>
+            <li>위치기반서비스 이용약관</li>
+            <li>개인정보처리방침</li>
+            <li>윤리경영</li>
+        </ul>
+    </div>
+    <div class="flex-box container pc">
+        <div>
+            <img src="img/footer-logo.png" alt="">
+        </div>
+        <div>
+            <p>서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호 ARS 1544-0070 대표이메일 m.dreamcenter@partner.megabox.co.kr<br>
+                    대표자명 홍정인, 남용석 · 개인정보보호책임자 김수현 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 2025-서울강남-00722<br>
+                    COPYRIGHT © MegaboxJoongAng, Inc. All rights reserved</p>
+        </div>
+        <div>
+            <img src="img/footer-youtube.png" alt="">
+            <img src="img/footer-instagram.png" alt="">
+            <img src="img/footer-facebook.png" alt="">
+            <img src="img/footer-twitter.png" alt="">
+        </div>
+    </div>
+
+    <div class="footer-tbmb container">
+        <div>
+            <img src="img/footerlogo-mb.png" alt="">
+        </div>
+        <p>이용약관 | 개인정보처리방침 | 위치기반서비스이용약관 | PC버전 <br>
+            © MegaboxJoongAng, Inc.
+        </p>
+
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</footer>
+
+
+
+
+
+<div id="mo-menu-box" >    <!-- width:100%; height : 100vh ; fixed -->
+   <div class="mo-menu-box-cont" >
+    <div class="mb-head flex-box">
+    	<div class="home">
+    		<a href="#" id="btn1"><i class="fa-solid fa-house" ></i></a>
+    	</div>
+    	<div class="setting">
+    		<a href="#" id="btn2"><i class="fa-solid fa-gear"></i></a>
+    	</div>
+    </div>
+
+    <div class="my flex-box">
+        <div class="profile flex-box">
+            <div><img src="img/mb-profile.png" alt=""></div>
+            <div><p><b>abcd님</b><br><span>VIP</span></p></div>
+        </div>
+        <div class="mymenu">마이 메뉴</div>
+    </div>
+
+    <div class="point flex-box"> 
+        <div><p><h2>1</h2><br><span>모바일 티켓</span></p></div>
+        <div><p><h2>24</h2><br><span>내 쿠폰</span></p></div>
+        <div><p><h2>5,800</h2><br><span>포인트</span></p></div>
+    </div>
+
+    <div class="reserv flex-box"> 
+        <div><img src="img/movie-booking.png" alt=""><p>영화별 예매</p></div>
+        <div><img src="img/location.png" alt=""><p>극장별 예매</p></div>
+        <div><img src="img/mobile-order.png" alt=""><p>모바일 오더</p></div>
+    </div>
+
+    <div class="mb-service">
+        <h3>서비스</h3>
+        <div class="flex-box"> 
+                    <ul>
+                        <li><a href="#">전체영화</a></li>
+                        <li><a href="#">전체극장</a></li>
+                        <li><a href="#">상영시간표</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">특별관</a></li>
+                        <li><a href="#">더 부티크 프라이빗</a></li>
+                        <li><a href="#">스토어</a></li>
+                    </ul>
+        </div>
+    </div>
+    <div class="mb-benefit">
+        <h3>혜택</h3>
+        <div class="flex-box">
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">제휴/할인</a></li>
+                        <li><a href="#">클럽 멤버십</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">VIP라운지</a></li>
+                    </ul>
+        </div>
+    </div>
+    <div class="mb-customer">
+        <h3>고객지원</h3>
+        <div class="flex-box">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                        <li><a href="#">단체/대관문의</a></li>
+                    </ul>
+        </div>
+    </div>
+
+    <div class="mb-notice">
+        <div class="flex-box">
+            <div>공지</div>
+            <div>[GS&POINT] 시스템 정기 점검 안내 (6/19)</div>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script>
+   $(function(){
+    $('.modal-close').click(
+        function(){
+            $('.modal').hide();
+        } );
+
+   });
+</script>
+</body>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
+
+
+
+
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+ <script>
+	 AOS.init({ disable: 'mobile' }); 
+
+
+//  ● 모바일 기기(스마트폰과 태블릿)에서 AOS 동작 제거, 아래 내용으로 수정할 것   
+
+//   AOS.init({ disable: 'mobile' }); 
+
+ </script>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+// 포스터 ========================================================= 
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2.5,
+      spaceBetween: 20,  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      loop: true,
+
+
+ breakpoints: {
+    // when window width is >= 320px
+   768: {
+      slidesPerView: 4.5,
+      spaceBetween: 20
+    },
+   992: {
+      slidesPerView: 5,
+      spaceBetween: 30
+    },
+
+    },
+
+
+    });
+
+
+
+
+// 이벤트 배너 =========================================================     
+    var swiper_2 = new Swiper(".mySwiper_2", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+
+      loop: true,
+ breakpoints: {
+    // when window width is >= 320px
+   768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+
+
+    },
+
+
+    });
+
+// 특별관=========================================================     
+
+    var swiper_3 = new Swiper(".mySwiper_3", {
+        slidesPerView: 2.5,
+      spaceBetween: 10,  
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      loop: true,
+
+
+ breakpoints: {
+    // when window width is >= 320px
+   768: {
+      slidesPerView: 4.5,
+      spaceBetween: 10
+    },
+   992: {
+      slidesPerView: 5.5,
+      spaceBetween: 10
+    },
+
+    },
+
+
+    });
+</script>
+
+</body>
+</html>
