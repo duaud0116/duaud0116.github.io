@@ -1,0 +1,269 @@
+*{margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none;}
+img{width: 100%;}
+.flex-box{display: flex; flex-wrap: wrap;}
+.container{max-width: 1400px; margin: auto;}
+a{color: #333333;}
+section{height: 100vh;}
+
+ .main, h2{font-family: "Sansita", sans-serif;
+  font-weight: 800;
+  font-style: italic;}
+
+.main{height: 100vh; background:#000;position: relative;}
+
+.main .text{position: absolute; right: 150px; z-index: 10000;
+    bottom: 160px; color: #ffffff; font-size: 86px; 
+    text-shadow: 0 0 10px rgb(231, 194, 194); text-align: right;}
+.main span{font-size: 50px;} 
+
+.main .introduce{font-size: 20px; font-style: normal; font-weight: 300; margin-bottom: -70px;}
+
+
+
+canvas {
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    display:block;
+    z-index: 1000;
+}
+.overlay {
+    position:relative;
+    z-index:2;
+    color:white;
+    text-align:center;
+    top:40%;
+}
+
+
+
+h2{font-size: 48px; margin: 30px 0 50px 0;}
+
+.aboutme, .works{width: 60%; color: #333333; margin-top: 150px;}
+
+.aboutme .box.flex-box{flex-wrap: nowrap;}
+.aboutme .box.flex-box>span:nth-child(1){width:20%;}
+
+.aboutme .italic{font-style: italic;}
+
+.aboutme .box-border{border: #868686 1px solid; padding: 30px; margin: auto;width: 100%;
+ border-radius: 20px; position: relative;
+}
+
+.aboutme .box{
+font-family: "Noto Sans","Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+ 
+padding: 50px;
+
+font-size: 20px;}
+
+.pick{position: absolute; right:50px; bottom: 30px; width: 300px;}
+
+.aboutme .box span{display: block; }
+.italic.sub-title-mo{display: none;}
+
+
+.works{margin-bottom: 200px; margin-top: 80px;}
+.works .title{width:170px; height: auto; margin: auto; background-color: #d9d9d9; text-align: center; font-size: 20px; padding: 5px 0;
+/* margin-top: 100px; */ margin-bottom: 10px;}
+
+.works .webpage.flex-box>div{width: 33.33%; padding: 15px; text-align: center; font-size: 18px; margin-bottom: 100px; cursor: pointer;}
+.detail.flex-box>div{width: 33.33%; padding: 15px; text-align: center; font-size: 18px; margin-bottom: 100px; cursor: pointer; }
+.detail.flex-box{justify-content: center;}
+
+
+
+.modal-open{position: relative;}
+.modal-open img{background-color: #fff; transition: all 0.5s;}
+.back{position: absolute; z-index: -1; left: 0; top: 0; padding: 15px;}
+
+
+/* 모달창 */
+
+.modal {
+    display: none;  
+    
+    position: fixed;
+    left: 0;
+    top: 0;    
+
+    overflow-y: auto;
+    
+    width: 100%;
+    height: 100%;   
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    z-index: 900; /* z-index는 반드시 들어가야 한다 */ }
+
+
+.modal-wrap {
+  
+    position: absolute;
+    left: 10%;/* 항상 수평 영역의 중앙에 위치하도록 설정 */
+    top: 100px;
+    
+    display: block;
+    width:80%;
+    
+    padding-bottom:50px;    
+}
+
+.modal-body{background-color: #ffffff;  text-align: center; padding:10px; }  
+
+
+.paulbassett, .lucas, .megabox {display: block; margin: auto;}
+.modal-body .livart{max-width: 860px; display: block; margin: auto;}
+
+.modal-body i{font-size: 50px; margin-top: 30px;}
+.modal-body i:hover{color: aquamarine;}
+.modal-body .detailview{font-size: 30px; margin-top: 30px; color: #868686;}
+.modal-body .detailview span{font-weight: bold; color: #000;}
+
+.modal-body .explain{margin: 20px 0; font-size: 20px; color: #333333;}
+
+
+
+.modal-close {
+    position: fixed;
+    right: 40px;
+    top: 20px;
+
+    display: block;
+    width: 50px;
+  
+
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.modal-close img{width: 55px;}
+
+
+/* 미디어쿼리 */
+
+@media (max-width:1630px) {
+.main img{width: auto;height: 100%;}
+.aboutme{width: 80%;  }
+.works{width: 80%; margin-top: 0; }
+
+.aboutme .box-border{width: 100%;}
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:991px) {
+.main .introduce{display: none;}
+
+.main .text{right: 0px; bottom: 400px; font-size: 80px;width: 100%; text-align: center; }
+
+.main .text span{font-size: 50px;}
+
+h2{font-size: 40px; margin: 0 0 50px 0;}
+.aboutme{height: 60vh;}
+.aboutme .box>span{width: 100%;}
+
+.aboutme, .works{margin-top: 100px;}
+.works{margin-bottom: 50px;}
+.aboutme .box.flex-box>span:nth-child(1){margin-right: 20px; width: 30%;}
+.aboutme .box{padding: 20px;}
+
+.pick{display: none;}
+
+.modal-body i{font-size: 32px; margin-top: 30px;}
+.modal-wrap {left: 5%; width: 90%;}
+
+.modal-body .detailview{font-size: 26px; margin-top: 30px; color: #868686;}
+.modal-body .detailview span{font-weight: bold; color: #000; font-size: 16px;}
+
+.modal-body .explain{font-size: 16px; margin: 20px 0; font-size: 14px; color: #333333;}
+
+
+.modal-close{right: 3%;}
+.modal-close img{width: 35px;}
+
+}
+
+
+@media (max-width:767px) {
+
+    .main .text{ bottom: 250px; font-size: 60px; }
+.main .text span{font-size: 30px;}
+
+h2{font-size: 36px; margin: 0 0 30px 0;}
+
+.aboutme{margin-top: 100px;}
+.aboutme .box{padding: 20px;
+font-size: 16px;}
+.aboutme .box span{height: auto;}
+
+.aboutme .box.flex-box{flex-wrap: wrap;}
+.aboutme .box.flex-box>span{width:100%;}
+.aboutme .box-border{padding: 10px;}
+
+
+
+.works{height: auto;}
+.works .title{width:130px; font-size: 16px; 
+/* margin-top: 100px; */ margin-bottom: 0;}
+.works .webpage.flex-box>div{width: 100%; margin-bottom: 10px;}
+.works .webpage.flex-box>div:nth-child(3){margin-bottom: 50px;}
+.works .detail img{width: 100% ;display: block; margin: auto; cursor: pointer; margin-top: 0;}
+
+
+.detail.flex-box>div{width: 100% }
+
+
+
+.modal-open p{font-size: 16px;}
+
+.modal-body i{font-size: 20px;}
+.modal-body .detailview{font-size: 22px; margin-top: 30px; color: #868686;}
+.modal-body .detailview span{font-weight: bold; color: #000; font-size: 20px;}
+
+.modal-body .explain{margin: 20px 0; font-size: 16px; color: #333333;}
+.modal-body .explain>br{display: none;}
+
+.modal-close img{width: 30px;}
+
+}
+
+
+@media (max-width:400px) {
+    .main .text{bottom: 200px; font-size: 48px; }
+
+.works{margin-top: 100px;}
+.modal-open p{font-size: 16px;}
+
+
+.modal-body i{font-size: 20px;}
+.modal-body .detailview{font-size: 20px; margin-top: 30px; color: #868686;}
+.modal-body .detailview span{font-weight: bold; color: #000; font-size: 18px;}
+
+.modal-body .explain{margin: 20px 0; font-size: 14px; color: #333333;}
+.modal-body .explain>br{display: none;}
+
+
+
+.modal-close img{width: 25px;}
+
+    
+}
+
